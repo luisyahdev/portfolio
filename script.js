@@ -1,24 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("h1, h2, h3, p, li");
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
 
-    elements.forEach((el, index) => {
+    anchor.addEventListener("click", function (e) {
 
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
+        e.preventDefault();
 
-        setTimeout(() => {
-            el.style.transition = "all 0.6s ease";
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
-        }, index * 120);
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+
     });
+
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "scale(1.05)";
+        card.style.transition = "0.3s";
+
     });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "scale(1)";
+
+    });
+
 });
