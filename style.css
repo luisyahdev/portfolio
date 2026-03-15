@@ -1,0 +1,94 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+    padding: 40px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Paragraph */
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Projects */
+ul {
+    list-style: none;
+}
+
+li {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* Contact */
+.contact {
+    margin-top: 30px;
+}
+
+/* Links */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+}
